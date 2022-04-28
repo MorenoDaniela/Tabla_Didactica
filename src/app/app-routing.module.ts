@@ -7,6 +7,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 import { AuthGuard } from './shared/guard/auth.guard';
 import { SplashComponent } from './components/splash/splash.component';
+import { FloatButtonsComponent } from './components/float-buttons/float-buttons.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent},
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
-  {path: 'splash', component:SplashComponent}
+  {path: 'splash', component:SplashComponent},
+  {path: 'buttons', component:FloatButtonsComponent},
 ];
 
 @NgModule({

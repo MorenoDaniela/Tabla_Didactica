@@ -22,6 +22,7 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
 // Auth service
 import { AuthService } from "./shared/services/auth.service";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FloatButtonsComponent } from './components/float-buttons/float-buttons.component';
 
 @NgModule({
   declarations: [AppComponent,
@@ -29,7 +30,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SignInComponent,
     SignUpComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    FloatButtonsComponent
   ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,AngularFireModule.initializeApp(environment.firebase),
