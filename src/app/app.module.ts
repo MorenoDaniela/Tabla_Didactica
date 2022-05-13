@@ -23,6 +23,7 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
 import { AuthService } from "./shared/services/auth.service";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FloatButtonsComponent } from './components/float-buttons/float-buttons.component';
+import { NativeAudio } from '@awesome-cordova-plugins/native-audio/ngx';
 
 @NgModule({
   declarations: [AppComponent,
@@ -42,7 +43,7 @@ import { FloatButtonsComponent } from './components/float-buttons/float-buttons.
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, NativeAudio],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

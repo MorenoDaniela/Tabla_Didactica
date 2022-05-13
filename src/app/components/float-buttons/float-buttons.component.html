@@ -47,99 +47,141 @@
 <!-- ANIMALES -->
 <div style="margin-top: 27%;" *ngIf="this.tema=='animales'">
 
-  <ion-button expand="full" slot="start" >
-    <img style="height: 30px" src="../../../assets/vaca.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/caballo.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/gallina.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/perro.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/gato.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/conejo.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/pez.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/oveja.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/pato.png">
-  </ion-button>
+
+  <div class="row bg-info">
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('vaca')">
+      <img class="rounded" style="height: 150px" src="../../../assets/vaca.png">
+    </div>
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('caballo')">
+      <img class="rounded" style="height: 150px" src="../../../assets/caballo.png">
+    </div>
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('gallina')">
+      <img class="rounded" style="height: 150px" src="../../../assets/gallina.png">
+    </div>
+    <div class="col-4 border border-dark"  (click)="selecioneAlgo('perro')">
+      <img class="rounded" style="height: 150px" src="../../../assets/perro.png">
+    </div>
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('gato')">
+      <img class="rounded" style="height: 150px" src="../../../assets/gato.png">
+    </div>
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('conejo')">
+      <img class="rounded" style="height: 150px" src="../../../assets/conejo.png">
+    </div>
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('pez')">
+      <img class="rounded" style="height: 150px" src="../../../assets/pez.png">
+    </div>
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('oveja')">
+      <img class="rounded" style="height: 150px" src="../../../assets/oveja.png">
+    </div>
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('pato')">
+      <img class="rounded" style="height: 150px" src="../../../assets/pato.png">
+    </div>
+  </div>
+
 </div>
   
 
 <!-- NUMEROS -->
 <div style="margin-top: 27%;" *ngIf="this.tema=='numeros'">
+  <div class="row bg-info">
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('uno')">
+      <img class="rounded" style="height: 150px" src="../../../assets/1.png">
+    </div>
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('dos')">
+      <img class="rounded" style="height: 150px" src="../../../assets/2.png">
+    </div>
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('tres')">
+      <img class="rounded" style="height: 150px" src="../../../assets/3.png">
+    </div>
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('cuatro')">
+      <img class="rounded" style="height: 150px" src="../../../assets/4.png">
+    </div>
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('cinco')">
+      <img class="rounded" style="height: 150px" src="../../../assets/5.png">
+    </div>
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('seis')">
+      <img class="rounded" style="height: 150px" src="../../../assets/6.png">
+    </div>
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('siete')">
+      <img class="rounded" style="height: 150px" src="../../../assets/7.png">
+    </div>
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('ocho')">
+      <img class="rounded" style="height: 150px" src="../../../assets/8.png">
+    </div>
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('nueve')">
+      <img class="rounded" style="height: 150px" src="../../../assets/9.png">
+    </div>
+  </div>
 
-  <ion-button expand="full" slot="start" >
-    <img style="height: 30px" src="../../../assets/1.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/2.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/3.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/4.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/5.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/6.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/7.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/8.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/9.png">
-  </ion-button>
+  
 </div>
   
   
   <!-- COLORES -->
 <div style="margin-top: 27%;" *ngIf="this.tema=='colores'">
 
-  <ion-button expand="full" slot="start" >
-    <img style="height: 30px" src="../../../assets/rojo.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/azul.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/rosa.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/amarillo.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/verde.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/violeta.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/negro.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/blanco.png">
-  </ion-button>
-  <ion-button expand="full" slot="start" style="margin-top: 5%;">
-    <img style="width: 28px" src="../../../assets/naranja.png">
-  </ion-button>
-</div>  
+  <div class="row bg-info">
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('rojo')">
+      <img class="rounded" style="height: 150px" src="../../../assets/rojo.png" >
+    </div>
+    
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('azul')">
+      <img class="rounded" style="height: 150px" src="../../../assets/azul.png">
+    </div>
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('rosa')">
+      <img class="rounded" style="height: 150px" src="../../../assets/rosa.png">
+    </div>
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('amarillo')">
+      <img class="rounded" style="height: 150px" src="../../../assets/amarillo.png">
+    </div>
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('verde')">
+      <img class="rounded" style="height: 150px" src="../../../assets/verde.png">
+    </div>
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('violeta')">
+      <img class="rounded" style="height: 150px" src="../../../assets/violeta.png">
+    </div>
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('negro')">
+      <img class="rounded" style="height: 150px" src="../../../assets/negro.png">
+    </div>
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('blanco')">
+      <img class="rounded" style="height: 150px" src="../../../assets/blanco.png">
+    </div>
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('naranja')">
+      <img class="rounded" style="height: 150px" src="../../../assets/naranja.png">
+    </div>
+  </div>
+
+
+
+</div>
+<div class="row" style="margin-top: 15%;">
+  <div class="col-4">
+    <div *ngIf="this.tema=='animales'">
+      <img class="rounded" style="height: 150px" src="../../../assets/animales.png">
+    </div>
+    <div *ngIf="this.tema=='numeros'">
+      <img class="rounded" style="height: 150px" src="../../../assets/numeros.png">
+    </div>
+    <div *ngIf="this.tema=='colores'">
+      <img class="rounded" style="height: 150px" src="../../../assets/colores.png">
+    </div>
+  </div>
+  <div class="col-4">
+    <img class="rounded" style="height: 150px" src="../../../assets/musical-note.png">
+  </div>
+  <div class="col-4">
+    <div *ngIf="this.idioma=='portugues'">
+      <img class="rounded" style="height: 150px" src="../../../assets/brasilElegido.png">
+    </div>
+    <div *ngIf="this.idioma=='ingles'">
+      <img class="rounded" style="height: 150px" src="../../../assets/eeuuElegido.png">
+    </div>
+    <div *ngIf="this.idioma=='espaniol'">
+      <img class="rounded" style="height: 150px" src="../../../assets/espanaElegido.png">
+    </div>
+  </div>
+
+</div>
+
   
 </ion-content>
