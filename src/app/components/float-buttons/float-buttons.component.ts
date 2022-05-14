@@ -14,13 +14,13 @@ export class FloatButtonsComponent implements OnInit {
 
   ngOnInit() 
   {
-    // this.cargarAudiosAnimalesEspaniol();
+    this.cargarAudiosAnimalesEspaniol();
     this.cargarAudiosAnimalesIngles();
     this.cargarAudiosAnimalesPortugues();
-    // this.cargarAudiosColoresEspaniol();
+    this.cargarAudiosColoresEspaniol();
     this.cargarAudiosColoresIngles();
     this.cargarAudiosColoresPortugues();
-    // this.cargarAudiosNumerosEspaniol();
+    this.cargarAudiosNumerosEspaniol();
     this.cargarAudiosNumerosIngles();
     this.cargarAudiosNumerosPortugues();
   }

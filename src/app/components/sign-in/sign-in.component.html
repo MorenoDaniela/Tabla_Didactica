@@ -5,20 +5,20 @@
     <ion-card-header>
       <ion-card-title class="text-center" style="color: whitesmoke;">Tabla didáctica</ion-card-title>
     </ion-card-header>
-    <div class="col-12">
+    <div class="col-12 text-center">
       <ion-chip (click)="Sereneis()">
         <ion-icon name="globe-outline" color="secondary"></ion-icon>
         <ion-label>Usuario 1</ion-label>
       </ion-chip>
     </div>
 
-    <div class="col-12">
+    <div class="col-12 text-center">
 <ion-chip (click)="Irina()">
   <ion-icon name="globe-outline" color="secondary"></ion-icon>
   <ion-label>Usuario 2</ion-label>
 </ion-chip>
 </div>
-<div class="col-12">
+<div class="col-12 text-center">
 <ion-chip (click)="Denu()">
   <ion-icon name="globe-outline" color="secondary"></ion-icon>
   <ion-label>Usuario 3</ion-label>
@@ -27,7 +27,7 @@
 
     <form [formGroup]="formulario" (ngSubmit)="Loguear()">
         <ion-item color="#71c1e8">
-          <ion-label position="floating">Email</ion-label>
+          <ion-label position="floating">Correo electrónico</ion-label>
           <ion-input type="text" class="formControl"  formControlName="Email" required></ion-input>
         </ion-item>
 
@@ -40,7 +40,7 @@
         </ion-item>
       
        <span class="text-danger" *ngIf="formulario.get('Password')?.hasError('required') && formulario.get('Password')?.touched">La contraseña es requerida.</span>  
-     
+     <br>
       <!-- <ion-button size="small" color="warning" type="submit" shape="round" expand="block" [disabled]="formulario.invalid">Logueate</ion-button> -->
       <ion-button type="submit" expand="block" [disabled]="formulario.invalid">
         <ion-icon name="enter-outline" size="large" ></ion-icon>

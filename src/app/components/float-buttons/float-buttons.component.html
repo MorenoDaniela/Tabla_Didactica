@@ -47,8 +47,51 @@
 <!-- ANIMALES -->
 <div style="margin-top: 27%;" *ngIf="this.tema=='animales'">
 
+  <div class="text-center">
+    <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('vaca')">
+      <img src="../../../assets/vaca.png" width="70" height="110"/> 
+  </button>
+  
+    <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('gallina')">
+      <img src="../../../assets/gallina.png" width="70" height="110"/> 
+  </button>
+  
+    <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('caballo')">
+      <img src="../../../assets/caballo.png" width="70" height="110"/> 
+  </button>
+  </div>
 
-  <div class="row bg-info">
+<div class="text-center">
+  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('pato')">
+    <img src="../../../assets/pato.png" width="70" height="110"/> 
+</button>
+
+  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('perro')">
+    <img src="../../../assets/perro.png" width="70" height="110"/> 
+</button>
+
+  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('gato')">
+    <img src="../../../assets/gato.png" width="70" height="110"/> 
+</button>
+</div>
+
+<div class="text-center">
+  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('conejo')">
+    <img src="../../../assets/conejo.png" width="70" height="110"/> 
+</button>
+
+  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('pez')">
+    <img src="../../../assets/pez.png" width="70" height="110"/> 
+</button>
+
+  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('oveja')">
+    <img src="../../../assets/oveja.png" width="70" height="110"/> 
+</button>
+</div>
+
+
+
+  <!-- <div class="row bg-info">
     <div class="col-4 border border-dark" (click)="selecioneAlgo('vaca')">
       <img class="rounded" style="height: 150px" src="../../../assets/vaca.png">
     </div>
@@ -76,14 +119,59 @@
     <div class="col-4 border border-dark" (click)="selecioneAlgo('pato')">
       <img class="rounded" style="height: 150px" src="../../../assets/pato.png">
     </div>
-  </div>
+  </div> -->
 
 </div>
   
 
 <!-- NUMEROS -->
 <div style="margin-top: 27%;" *ngIf="this.tema=='numeros'">
-  <div class="row bg-info">
+  <div class="text-center">
+    <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('uno')">
+      <img src="../../../assets/1.png" width="70" height="110"/> 
+  </button>
+  
+    <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('dos')">
+      <img src="../../../assets/2.png" width="70" height="110"/> 
+  </button>
+  
+    <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('tres')">
+      <img src="../../../assets/3.png" width="70" height="110"/> 
+  </button>
+  </div>
+
+<div class="text-center">
+  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('cuatro')">
+    <img src="../../../assets/4.png" width="70" height="110"/> 
+</button>
+
+  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('cinco')">
+    <img src="../../../assets/5.png" width="70" height="110"/> 
+</button>
+
+  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('seis')">
+    <img src="../../../assets/6.png" width="70" height="110"/> 
+</button>
+</div>
+
+<div class="text-center">
+  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('siete')">
+    <img src="../../../assets/7.png" width="70" height="110"/> 
+</button>
+
+  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('ocho')">
+    <img src="../../../assets/8.png" width="70" height="110"/> 
+</button>
+
+  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('nueve')">
+    <img src="../../../assets/9.png" width="70" height="110"/> 
+</button>
+</div>
+
+
+
+
+  <!-- <div class="row bg-info">
     <div class="col-4 border border-dark" (click)="selecioneAlgo('uno')">
       <img class="rounded" style="height: 150px" src="../../../assets/1.png">
     </div>
@@ -111,7 +199,7 @@
     <div class="col-4 border border-dark" (click)="selecioneAlgo('nueve')">
       <img class="rounded" style="height: 150px" src="../../../assets/9.png">
     </div>
-  </div>
+  </div> -->
 
   
 </div>
@@ -120,8 +208,52 @@
   <!-- COLORES -->
 <div style="margin-top: 27%;" *ngIf="this.tema=='colores'">
 
-  <div class="row bg-info">
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('rojo')">
+  <div class="text-center">
+    <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('rojo')">
+      <img src="../../../assets/rojo.png" width="70" height="110"/> 
+  </button>
+  
+    <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('azul')">
+      <img src="../../../assets/azul.png" width="70" height="110"/> 
+  </button>
+  
+    <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('verde')">
+      <img src="../../../assets/verde.png" width="70" height="110"/> 
+  </button>
+  </div>
+
+<div class="text-center">
+  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('amarillo')">
+    <img src="../../../assets/amarillo.png" width="70" height="110"/> 
+</button>
+
+  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('rosa')">
+    <img src="../../../assets/rosa.png" width="70" height="110"/> 
+</button>
+
+  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('violeta')">
+    <img src="../../../assets/violeta.png" width="70" height="110"/> 
+</button>
+</div>
+
+<div class="text-center">
+  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('negro')">
+    <img src="../../../assets/negro.png" width="70" height="110"/> 
+</button>
+
+  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('blanco')">
+    <img src="../../../assets/blanco.png" width="70" height="110"/> 
+</button>
+
+  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('naranja')">
+    <img src="../../../assets/naranja.png" width="70" height="110"/> 
+</button>
+</div>
+
+
+
+  <!-- <div class="row bg-info">
+    <div class="col-4 border border-dark" (click)="selecioneAlgo('rojo')" style="border-width: 1px;">
       <img class="rounded" style="height: 150px" src="../../../assets/rojo.png" >
     </div>
     
@@ -149,12 +281,12 @@
     <div class="col-4 border border-dark" (click)="selecioneAlgo('naranja')">
       <img class="rounded" style="height: 150px" src="../../../assets/naranja.png">
     </div>
-  </div>
+  </div> -->
 
 
 
 </div>
-<div class="row" style="margin-top: 15%;">
+<div class="row bg-info border-dark" style="margin-top: 15%;" *ngIf="this.tema!='' && this.idioma!=''">
   <div class="col-4">
     <div *ngIf="this.tema=='animales'">
       <img class="rounded" style="height: 150px" src="../../../assets/animales.png">
