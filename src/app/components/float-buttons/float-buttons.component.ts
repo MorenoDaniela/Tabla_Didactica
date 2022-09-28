@@ -14,6 +14,8 @@ export class FloatButtonsComponent implements OnInit {
 
   ngOnInit() 
   {
+    this.idioma="espaniol";
+    this.tema="numeros";
     this.cargarAudiosAnimalesEspaniol();
     this.cargarAudiosAnimalesIngles();
     this.cargarAudiosAnimalesPortugues();

@@ -1,12 +1,40 @@
 ion-content{
     --background:#E7A2A2;
 }
-.fab {
-    width: 100px !important;
-    height: 100px !important;
-    }
 
-    .margin-left{
-        margin-left: 7px !important;
-        margin-top: 7px !important;
-    }
+@font-face{
+        font-family: 'Nova Mono';
+        src:url('../../../assets/NovaMono-Regular.ttf')
+}
+    
+h5, ion-item, ion-label, span, ion-button, ion-input{
+        font-family: 'Nova Mono';
+}
+
+
+.w {
+height: 100%;    
+ width: 100%;
+}
+
+@media (min-width: 800px) {
+        .column {
+          flex: 23%;
+          max-width: 23%;
+          margin-top: 4px;
+        }
+        .m-t{
+                margin-top: 9%;        
+                }
+      }
+      @media (max-width: 500px) {
+        .column {
+          flex: 50%;
+          max-width: 50%;
+          margin-top: 4px;
+        }
+        .m-t{
+        margin-top: 22%;        
+        }
+      }
+

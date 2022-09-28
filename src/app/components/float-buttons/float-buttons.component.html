@@ -1,212 +1,223 @@
 <ion-content>
-    <!-- arriba izquierda -->
-    <ion-fab vertical="top" horizontal="start" slot="fixed">
-      <ion-fab-button (click)="selectEspaniol()">
-        <img style="width: 28px" src="../../../assets/espania.png">
+
+
+  <ion-fab vertical="top" horizontal="start" slot="fixed" class="ios fab-horizontal-start fab-vertical-top hydrated">
+    <!-- <ion-fab-button color="secondary" class="ion-color ion-color-secondary ios ion-activatable ion-focusable hydrated">
+      <img style="width: 75px" src="../../../assets/idioma.png">
+    </ion-fab-button> -->
+    <ion-fab-button color="secondary" class="ion-color ion-color-secondary ios ion-activatable ion-focusable hydrated" *ngIf="this.idioma=='ingles'">
+      <img style="width: 75px" src="../../../assets/USA.png">
+    </ion-fab-button>
+    <ion-fab-button color="secondary" class="ion-color ion-color-secondary ios ion-activatable ion-focusable hydrated" *ngIf="this.idioma=='portugues'">
+      <img style="width: 75px" src="../../../assets/brasil.png">
+    </ion-fab-button>
+    <ion-fab-button color="secondary" class="ion-color ion-color-secondary ios ion-activatable ion-focusable hydrated" *ngIf="this.idioma=='espaniol'">
+      <img style="width: 75px" src="../../../assets/espania.png">
+    </ion-fab-button>
+    <ion-fab-list side="end" class="ios fab-list-side-end hydrated">
+      <ion-fab-button (click)="selectEspaniol()" color="light" class="ion-color ion-color-light ios fab-button-in-list ion-activatable ion-focusable hydrated">
+        <img style="width: 55px; background-color: #3dc2ff;" src="../../../assets/espania.png">
       </ion-fab-button>
-    </ion-fab>
-     <!-- arriba medio -->
-     <ion-fab vertical="top" horizontal="center" slot="fixed">
-      <ion-fab-button (click)="selectPortugues()">
-        <img style="width: 28px" src="../../../assets/brasil.png">
+      <ion-fab-button (click)="selectPortugues()" color="light" class="ion-color ion-color-light ios fab-button-in-list ion-activatable ion-focusable hydrated">
+        <img style="width: 55px; background-color: #3dc2ff;" src="../../../assets/brasil.png">
       </ion-fab-button>
+      <ion-fab-button (click)="selectIngles()" color="light" class="ion-color ion-color-light ios fab-button-in-list ion-activatable ion-focusable hydrated">
+        <img style="width: 55px; background-color: #3dc2ff;" src="../../../assets/USA.png">
+      </ion-fab-button>
+      
+    </ion-fab-list>
+  </ion-fab>
+
+
+
+    <ion-fab horizontal="end" vertical="top" slot="fixed" class="ios fab-horizontal-end fab-vertical-top hydrated">
+      <!-- <ion-fab-button color="secondary" class="ion-color ion-color-secondary ios ion-activatable ion-focusable hydrated">
+        <img style="width: 75px" src="../../../assets/losTres.png">
+      </ion-fab-button> -->
+      <ion-fab-button color="secondary" class="ion-color ion-color-secondary ios ion-activatable ion-focusable hydrated"  *ngIf="this.tema=='colores'">
+        <img style="width: 75px" src="../../../assets/colores.png">
+      </ion-fab-button>
+      <ion-fab-button color="secondary" class="ion-color ion-color-secondary ios ion-activatable ion-focusable hydrated"  *ngIf="this.tema=='numeros'">
+        <img style="width: 75px" src="../../../assets/numeros.png">
+      </ion-fab-button>
+      <ion-fab-button color="secondary" class="ion-color ion-color-secondary ios ion-activatable ion-focusable hydrated"  *ngIf="this.tema=='animales'">
+        <img style="width: 75px" src="../../../assets/animales.png">
+      </ion-fab-button>
+      <ion-fab-list side="start" class="ios fab-list-side-start hydrated">
+        <ion-fab-button (click)="selectAnimales()" color="secondary" class="ion-color ion-color-light ios fab-button-in-list ion-activatable ion-focusable hydrated">
+          <img style="width: 37px; background-color: #3dc2ff;" src="../../../assets/animales.png">
+        </ion-fab-button>
+        <ion-fab-button (click)="selectNumeros()" color="secondary" class="ion-color ion-color-light ios fab-button-in-list ion-activatable ion-focusable hydrated">
+          <img style="width: 37px; background-color: #3dc2ff;" src="../../../assets/numeros.png">
+        </ion-fab-button>
+        <ion-fab-button (click)="selectColores()" color="secondary" class="ion-color ion-color-light ios fab-button-in-list ion-activatable ion-focusable hydrated">
+          <img style="width: 37px; background-color: #3dc2ff;" src="../../../assets/colores.png">
+        </ion-fab-button>
+      </ion-fab-list>
     </ion-fab>
-  <!-- arriba derecha -->
-  <ion-fab vertical="top" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="selectIngles()">
-      <img style="width: 28px" src="../../../assets/USA.png">
-    </ion-fab-button>
-  </ion-fab>
 
 
 
-  <!-- abajo derecha -->
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed" >
-    <ion-fab-button (click)="selectAnimales()">
-      <img style="width: 28px" src="../../../assets/animales.png">
-    </ion-fab-button>
-  </ion-fab>
-
-
-
-  <!-- abajo izquierda -->
-  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
-    <ion-fab-button (click)="selectColores()">
-      <img style="width: 28px" src="../../../assets/colores.png">
-    </ion-fab-button>
-  </ion-fab>
-
-
-  <!-- abajo medio -->
-  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
-    <ion-fab-button (click)="selectNumeros()">
-      <img style="width: 28px" src="../../../assets/numeros.png">
-    </ion-fab-button>
-  </ion-fab>
 
 <!-- ANIMALES -->
-<div style="margin-top: 27%;" *ngIf="this.tema=='animales'">
+
+<div class="container m-t"  *ngIf="this.tema=='animales'">
+  <div class="row">
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded border border-dark bg-info item w" src="../../../assets/vaca.png" (click)="selecioneAlgo('vaca')"/> 
+    </div>
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded border border-dark bg-info item w"  src="../../../assets/gallina.png" (click)="selecioneAlgo('gallina')">
+    </div>
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded border border-dark bg-info item w"  src="../../../assets/caballo.png" (click)="selecioneAlgo('caballo')">
+    </div>
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded border border-dark bg-info item"  src="../../../assets/pato.png" (click)="selecioneAlgo('pato')">
+    </div>
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded border border-dark bg-info item"  src="../../../assets/oveja.png" (click)="selecioneAlgo('oveja')">
+    </div>
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded border border-dark bg-info item"  src="../../../assets/perro.png" (click)="selecioneAlgo('perro')">
+    </div>
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded border border-dark bg-info item"  src="../../../assets/conejo.png" (click)="selecioneAlgo('conejo')">
+    </div>
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded  border border-dark bg-info" src="../../../assets/pez.png" (click)="selecioneAlgo('pez')">
+    </div>
+  
+  </div>
+
+</div>
+
+<!-- <div style="margin-top: 27%;" *ngIf="this.tema=='animales'">
+
+    <div class="text-center">
+      <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('vaca')">
+        <img src="../../../assets/vaca.png" width="70" height="110"/> 
+    </button>
+    
+      <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('gallina')">
+        <img src="../../../assets/gallina.png" width="70" height="110"/> 
+    </button>
+    
+      <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('caballo')">
+        <img src="../../../assets/caballo.png" width="70" height="110"/> 
+    </button>
+    </div>
 
   <div class="text-center">
-    <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('vaca')">
-      <img src="../../../assets/vaca.png" width="70" height="110"/> 
+    <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('pato')">
+      <img src="../../../assets/pato.png" width="70" height="110"/> 
   </button>
-  
-    <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('gallina')">
-      <img src="../../../assets/gallina.png" width="70" height="110"/> 
+
+    <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('perro')">
+      <img src="../../../assets/perro.png" width="70" height="110"/> 
   </button>
-  
-    <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('caballo')">
-      <img src="../../../assets/caballo.png" width="70" height="110"/> 
+
+    <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('gato')">
+      <img src="../../../assets/gato.png" width="70" height="110"/> 
   </button>
   </div>
 
-<div class="text-center">
-  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('pato')">
-    <img src="../../../assets/pato.png" width="70" height="110"/> 
-</button>
+  <div class="text-center">
+      <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('conejo')">
+        <img src="../../../assets/conejo.png" width="70" height="110"/> 
+    </button>
 
-  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('perro')">
-    <img src="../../../assets/perro.png" width="70" height="110"/> 
-</button>
+      <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('pez')">
+        <img src="../../../assets/pez.png" width="70" height="110"/> 
+    </button>
 
-  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('gato')">
-    <img src="../../../assets/gato.png" width="70" height="110"/> 
-</button>
-</div>
-
-<div class="text-center">
-  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('conejo')">
-    <img src="../../../assets/conejo.png" width="70" height="110"/> 
-</button>
-
-  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('pez')">
-    <img src="../../../assets/pez.png" width="70" height="110"/> 
-</button>
-
-  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('oveja')">
-    <img src="../../../assets/oveja.png" width="70" height="110"/> 
-</button>
-</div>
+      <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('oveja')">
+        <img src="../../../assets/oveja.png" width="70" height="110"/> 
+    </button>
+  </div> 
 
 
 
-  <!-- <div class="row bg-info">
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('vaca')">
-      <img class="rounded" style="height: 150px" src="../../../assets/vaca.png">
-    </div>
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('caballo')">
-      <img class="rounded" style="height: 150px" src="../../../assets/caballo.png">
-    </div>
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('gallina')">
-      <img class="rounded" style="height: 150px" src="../../../assets/gallina.png">
-    </div>
-    <div class="col-4 border border-dark"  (click)="selecioneAlgo('perro')">
-      <img class="rounded" style="height: 150px" src="../../../assets/perro.png">
-    </div>
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('gato')">
-      <img class="rounded" style="height: 150px" src="../../../assets/gato.png">
-    </div>
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('conejo')">
-      <img class="rounded" style="height: 150px" src="../../../assets/conejo.png">
-    </div>
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('pez')">
-      <img class="rounded" style="height: 150px" src="../../../assets/pez.png">
-    </div>
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('oveja')">
-      <img class="rounded" style="height: 150px" src="../../../assets/oveja.png">
-    </div>
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('pato')">
-      <img class="rounded" style="height: 150px" src="../../../assets/pato.png">
-    </div>
-  </div> -->
 
-</div>
+
+</div>  -->
   
 
 <!-- NUMEROS -->
-<div style="margin-top: 27%;" *ngIf="this.tema=='numeros'">
-  <div class="text-center">
-    <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('uno')">
-      <img src="../../../assets/1.png" width="70" height="110"/> 
-  </button>
+<div class="container m-t"  *ngIf="this.tema=='numeros'">
+  <div class="row">
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded border border-dark bg-info item w"  src="../../../assets/1.png" (click)="selecioneAlgo('uno')">
+    </div>
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded border border-dark bg-info item w"  src="../../../assets/2.png" (click)="selecioneAlgo('dos')">
+    </div>
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded border border-dark bg-info item w"  src="../../../assets/3.png" (click)="selecioneAlgo('tres')">
+    </div>
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded border border-dark bg-info item"  src="../../../assets/4.png" (click)="selecioneAlgo('cuatro')">
+    </div>
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded border border-dark bg-info item"  src="../../../assets/5.png" (click)="selecioneAlgo('cinco')">
+    </div>
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded border border-dark bg-info item"  src="../../../assets/6.png" (click)="selecioneAlgo('seis')">
+    </div>
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded border border-dark bg-info item"  src="../../../assets/7.png" (click)="selecioneAlgo('siete')">
+    </div>
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded  border border-dark bg-info" style="width:100%" src="../../../assets/8.png" (click)="selecioneAlgo('ocho')">
+    </div>
+    <!-- <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded  border border-dark bg-info" style="width:100%" src="../../../assets/9.png" (click)="selecioneAlgo('nueve')"> 
+    </div> -->
   
-    <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('dos')">
-      <img src="../../../assets/2.png" width="70" height="110"/> 
-  </button>
-  
-    <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('tres')">
-      <img src="../../../assets/3.png" width="70" height="110"/> 
-  </button>
   </div>
 
-<div class="text-center">
-  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('cuatro')">
-    <img src="../../../assets/4.png" width="70" height="110"/> 
-</button>
-
-  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('cinco')">
-    <img src="../../../assets/5.png" width="70" height="110"/> 
-</button>
-
-  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('seis')">
-    <img src="../../../assets/6.png" width="70" height="110"/> 
-</button>
 </div>
-
-<div class="text-center">
-  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('siete')">
-    <img src="../../../assets/7.png" width="70" height="110"/> 
-</button>
-
-  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('ocho')">
-    <img src="../../../assets/8.png" width="70" height="110"/> 
-</button>
-
-  <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('nueve')">
-    <img src="../../../assets/9.png" width="70" height="110"/> 
-</button>
-</div>
-
-
-
-
-  <!-- <div class="row bg-info">
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('uno')">
-      <img class="rounded" style="height: 150px" src="../../../assets/1.png">
-    </div>
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('dos')">
-      <img class="rounded" style="height: 150px" src="../../../assets/2.png">
-    </div>
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('tres')">
-      <img class="rounded" style="height: 150px" src="../../../assets/3.png">
-    </div>
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('cuatro')">
-      <img class="rounded" style="height: 150px" src="../../../assets/4.png">
-    </div>
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('cinco')">
-      <img class="rounded" style="height: 150px" src="../../../assets/5.png">
-    </div>
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('seis')">
-      <img class="rounded" style="height: 150px" src="../../../assets/6.png">
-    </div>
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('siete')">
-      <img class="rounded" style="height: 150px" src="../../../assets/7.png">
-    </div>
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('ocho')">
-      <img class="rounded" style="height: 150px" src="../../../assets/8.png">
-    </div>
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('nueve')">
-      <img class="rounded" style="height: 150px" src="../../../assets/9.png">
-    </div>
-  </div> -->
-
+ 
   
-</div>
+
   
   
   <!-- COLORES -->
-<div style="margin-top: 27%;" *ngIf="this.tema=='colores'">
+
+  
+<div class="container m-t"  *ngIf="this.tema=='colores'">
+  <div class="row text-center">
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded border border-dark bg-info item w" src="../../../assets/rojo.png" (click)="selecioneAlgo('rojo')"/> 
+    </div>
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded border border-dark bg-info item w"  src="../../../assets/azul.png" (click)="selecioneAlgo('azul')">
+    </div>
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded border border-dark bg-info item w"  src="../../../assets/verde.png" (click)="selecioneAlgo('verde')">
+    </div>
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded border border-dark bg-info item"  src="../../../assets/violeta.png" (click)="selecioneAlgo('violeta')">
+    </div>
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded border border-dark bg-info item"  src="../../../assets/amarillo.png" (click)="selecioneAlgo('amarillo')">
+    </div>
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded border border-dark bg-info item"  src="../../../assets/rosa.png" (click)="selecioneAlgo('rosa')">
+    </div>
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded border border-dark bg-info item"  src="../../../assets/negro.png" (click)="selecioneAlgo('negro')">
+    </div>
+    <div class="col-4 col-sm-4 col-lg-4 column" >
+      <img class="rounded  border border-dark bg-info" src="../../../assets/naranja.png" (click)="selecioneAlgo('naranja')">
+    </div>
+  
+  </div>
+
+</div>
+
+
+<!-- <div style="margin-top: 27%;" *ngIf="this.tema=='colores'">
 
   <div class="text-center">
     <button class="btn btn-default border-dark bg-info p-3 margin-left" (click)="selecioneAlgo('rojo')">
@@ -252,68 +263,12 @@
 
 
 
-  <!-- <div class="row bg-info">
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('rojo')" style="border-width: 1px;">
-      <img class="rounded" style="height: 150px" src="../../../assets/rojo.png" >
-    </div>
-    
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('azul')">
-      <img class="rounded" style="height: 150px" src="../../../assets/azul.png">
-    </div>
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('rosa')">
-      <img class="rounded" style="height: 150px" src="../../../assets/rosa.png">
-    </div>
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('amarillo')">
-      <img class="rounded" style="height: 150px" src="../../../assets/amarillo.png">
-    </div>
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('verde')">
-      <img class="rounded" style="height: 150px" src="../../../assets/verde.png">
-    </div>
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('violeta')">
-      <img class="rounded" style="height: 150px" src="../../../assets/violeta.png">
-    </div>
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('negro')">
-      <img class="rounded" style="height: 150px" src="../../../assets/negro.png">
-    </div>
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('blanco')">
-      <img class="rounded" style="height: 150px" src="../../../assets/blanco.png">
-    </div>
-    <div class="col-4 border border-dark" (click)="selecioneAlgo('naranja')">
-      <img class="rounded" style="height: 150px" src="../../../assets/naranja.png">
-    </div>
-  </div> -->
 
 
 
-</div>
-<div class="row bg-info border-dark" style="margin-top: 15%;" *ngIf="this.tema!='' && this.idioma!=''">
-  <div class="col-4">
-    <div *ngIf="this.tema=='animales'">
-      <img class="rounded" style="height: 150px" src="../../../assets/animales.png">
-    </div>
-    <div *ngIf="this.tema=='numeros'">
-      <img class="rounded" style="height: 150px" src="../../../assets/numeros.png">
-    </div>
-    <div *ngIf="this.tema=='colores'">
-      <img class="rounded" style="height: 150px" src="../../../assets/colores.png">
-    </div>
-  </div>
-  <div class="col-4">
-    <img class="rounded" style="height: 150px" src="../../../assets/musical-note.png">
-  </div>
-  <div class="col-4">
-    <div *ngIf="this.idioma=='portugues'">
-      <img class="rounded" style="height: 150px" src="../../../assets/brasilElegido.png">
-    </div>
-    <div *ngIf="this.idioma=='ingles'">
-      <img class="rounded" style="height: 150px" src="../../../assets/eeuuElegido.png">
-    </div>
-    <div *ngIf="this.idioma=='espaniol'">
-      <img class="rounded" style="height: 150px" src="../../../assets/espanaElegido.png">
-    </div>
-  </div>
 
-</div>
+</div> -->
+
 
   
 </ion-content>
